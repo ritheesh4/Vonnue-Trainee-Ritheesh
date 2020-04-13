@@ -1,6 +1,6 @@
-var readline = require("readline-sync");
-var number1 = readline.question("Enter first Number :");
-var number2 = readline.question("Enter the second Number:");
+const readline = require("readline-sync");
+const number1 = readline.question("Enter first Number : ");
+const number2 = readline.question("Enter the second Number: ");
 
 let addition = parseInt(number1) + parseInt(number2);
 console.log("Addition:", number1, "+", number2, "=", addition);
@@ -18,7 +18,7 @@ let modulus = parseInt(number1) % parseInt(number2);
 console.log("Modulus:", number1, "%", number2, "=", modulus);
 
 if (parseInt(number1) > parseInt(number2)) {
-    console.log("First number is greater than the second number");
+    console.log("First number is greater than the second number.");
 } else if (parseInt(number1) < parseInt(number2)) {
     console.log("Second number is greater than the first number.");
 } else if (parseInt(number1) === parseInt(number2)) {
