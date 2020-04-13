@@ -1,0 +1,1 @@
+This repo contains the javscript training programs.
