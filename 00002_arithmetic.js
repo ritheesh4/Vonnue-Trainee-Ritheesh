@@ -1,6 +1,6 @@
-const readline = require("readline-sync");
-const number1 = readline.question("Enter first Number : ");
-const number2 = readline.question("Enter the second Number: ");
+const readLine = require("readline-sync");
+const number1 = readLine.question("Enter first Number : ");
+const number2 = readLine.question("Enter the second Number: ");
 
 let addition = parseInt(number1) + parseInt(number2);
 console.log("Addition:", number1, "+", number2, "=", addition);
