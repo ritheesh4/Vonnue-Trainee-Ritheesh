@@ -4,11 +4,11 @@ const readLine = require('readline-sync');
 const inputString = readLine.question("Enter the string to check palindrome property: ");
 
 let palindromeTesting = (inputString) => {
-    let reverOftheString = inputString.split('').reverse().join('');
-    if (inputString === reverOftheString){
-        console.log("The input string is a palindrome");
+    let reverseOftheString = inputString.split('').reverse().join('');
+    if (inputString === reverseOftheString){
+        console.log("The input string is a palindrome.");
     }else {
-        console.log("The input string is not a palindrome");
+        console.log("The input string is not a palindrome.");
     }
 }
 
