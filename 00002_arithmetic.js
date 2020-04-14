@@ -6,32 +6,32 @@ const readLine = require("readline-sync");
 const number1 = readLine.question("Enter first Number : ");
 const number2 = readLine.question("Enter the second Number: ");
 
-let addition = () => {
+let addition = (number1, number2) => {
     let result = parseInt(number1) + parseInt(number2);
     console.log("Addition:", number1, "+", number2, "=", result);
 }
 
-let subtraction = () => {
+let subtraction = (number1, number2) => {
     let result = parseInt(number1) - parseInt(number2);
     console.log("Subtraction:", number1, "-", number2, "=", result);
 }
 
-let multiplication = () => {
+let multiplication = (number1, number2) => {
     let result = parseInt(number1) * parseInt(number2);
     console.log("Multiplication:", number1, "*", number2, "=", result);
 }
 
-let division = () => {
+let division = (number1, number2) => {
     let result = parseInt(number1) / parseInt(number2);
     console.log("Division:", number1, "/", number2, "=", result);
 }
 
-let modulus = () => {
+let modulus = (number1, number2) => {
     let result = parseInt(number1) % parseInt(number2);
     console.log("Modulus:", number1, "%", number2, "=", result);
 }
 
-let numberCompare = () => {
+let numberCompare = (number1, number2) => {
     if (parseInt(number1) > parseInt(number2)) {
         console.log("First number is greater than the second number.");
     } else if (parseInt(number1) < parseInt(number2)) {
