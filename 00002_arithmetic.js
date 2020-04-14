@@ -7,32 +7,32 @@ const readLine = require("readline-sync");
 const number1 = readLine.question("Enter first Number : ");
 const number2 = readLine.question("Enter the second Number: ");
 
-const addition = (number1, number2) => {
-    parseInt(number1) + parseInt(number2);
-    console.log("Addition:", number1, "+", number2, "=", addition);
+let addition = () => {
+    let result = parseInt(number1) + parseInt(number2);
+    console.log("Addition:", number1, "+", number2, "=", result);
 }
 
-const subtraction = (number1, number2) => {
-    parseInt(number1) - parseInt(number2);
-    console.log("Subtraction:", number1, "-", number2, "=", subtraction);
+let subtraction = () => {
+    let result = parseInt(number1) - parseInt(number2);
+    console.log("Subtraction:", number1, "-", number2, "=", result);
 }
 
-const multiplication = (number1, number2) => {
-    parseInt(number1) * parseInt(number2);
-    console.log("Multiplication:", number1, "*", number2, "=", multiplication);
+let multiplication = () => {
+    let result = parseInt(number1) * parseInt(number2);
+    console.log("Multiplication:", number1, "*", number2, "=", result);
 }
 
-const devision = (number1, number2) => {
-    parseInt(number1) / parseInt(number2);
-    console.log("Devision:", number1, "/", number2, "=", devision);
+let division = () => {
+    let result = parseInt(number1) / parseInt(number2);
+    console.log("Division:", number1, "/", number2, "=", result);
 }
 
-const modulus = (number1, number2) => {
-    parseInt(number1) % parseInt(number2);
-    console.log("Modulus:", number1, "%", number2, "=", modulus);
+let modulus = () => {
+    let result = parseInt(number1) % parseInt(number2);
+    console.log("Modulus:", number1, "%", number2, "=", result);
 }
 
-const numberCompare = (number1, number2) => {
+let numberCompare = () => {
     if (parseInt(number1) > parseInt(number2)) {
         console.log("First number is greater than the second number.");
     } else if (parseInt(number1) < parseInt(number2)) {
@@ -42,9 +42,9 @@ const numberCompare = (number1, number2) => {
     }
 }
 
-addition(number1, number2); 
-subtraction(number1, number2); 
+addition(number1, number2);
+subtraction(number1, number2);
 multiplication(number1, number2);
-devision(number1, number2);
-modulus(number1,number2);
-numberCompare(number1,number2);
+division(number1, number2);
+modulus(number1, number2);
+numberCompare(number1, number2);
