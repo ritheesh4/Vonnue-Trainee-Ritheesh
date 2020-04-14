@@ -1,7 +1,7 @@
 /*2. Enter 2 numbers and display the result for the following operations (each operation should be a function)
     add / multiply / divide / modulus / substract / greater than / less than / is equal
 */
-// import readlineSync module to accept commandline arguments
+
 
 const readLine = require("readline-sync");
 const number1 = readLine.question("Enter first Number : ");
