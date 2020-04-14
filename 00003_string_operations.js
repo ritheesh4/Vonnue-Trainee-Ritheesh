@@ -5,12 +5,12 @@ const readline = require("readline-sync");
 const string1 = readline.question("Enter the first string : ");
 const string2 = readline.question("Enter the second string : ");
 
-let concatinate = (string1, string2) => {
-    string1.concat(string2);
-    console.log("Concatinated : ", concatinate);
+let concatinate = () => {
+    let concatinatedResult = string1.concat(string2);
+    console.log("Concatinated : ", concatinatedResult);
 }
 
-let reverseString = (string1, string2) => {
+let reverseString = () => {
     let reverseString1 = string1.split('').reverse().join('');
     console.log("Reverse of the first string :", reverseString1);
     let reverseString2 = string2.split('').reverse().join('');
@@ -19,7 +19,7 @@ let reverseString = (string1, string2) => {
     console.log("Reverse concatinated :", reverseConcat);
 }
 
-let stringMixUp = (string1, string2) => {
+let stringMixUp = () => {
     let stringMix = [];
     if (string1.length > string2.length) {
         for (i = 0; i < string1.length; i++) {
@@ -61,7 +61,7 @@ splitedHalfOfString2 = () => {
 }
 console.log("The splited half of the second string :", splitedHalfOfString2());
 
-let spaceOfStrings = (string1, string2) => {
+let spaceOfStrings = () => {
     let spaceRemovedString1 = string1.replace(/ /g, "");;
     console.log("The space in the first string removed : ", spaceRemovedString1);
     let spaceRemovedString2 = string2.replace(/ /g, "");
