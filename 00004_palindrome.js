@@ -1,6 +1,6 @@
 // 4. Enter a  string and find if it's a palindrome.
 
-let inputString;
+let inputString = "";
 
 const palindromeTesting = (inputString) => {
     let reverseOfString = inputString.split('').reverse().join('');
@@ -12,4 +12,6 @@ const palindromeTesting = (inputString) => {
 }
 
 palindromeTesting(inputString);
+console.log(palindromeTesting("malayalam"));
+console.log(palindromeTesting("ritheesh"));
 
