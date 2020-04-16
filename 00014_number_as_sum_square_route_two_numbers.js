@@ -1,6 +1,5 @@
 // 14. Write program to check if number can be expressed as sum of squares of two whole numbers
 
-
 let inputNumber;
 
 const checkSumOfSquares = (inputNumber) => {
