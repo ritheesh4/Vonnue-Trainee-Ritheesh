@@ -14,7 +14,6 @@ const primeNumberTesint = (inputNumber) => {
                 if (inputNumber % i === 0) {
                     flagForPrimeConclusion = 1;
                     return "Not prime"
-
                 }
             } else {
                 flagForPrimeConclusion = 2;
