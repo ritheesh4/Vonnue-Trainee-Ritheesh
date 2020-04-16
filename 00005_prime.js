@@ -20,9 +20,11 @@ const primeNumberTesint = (inputNumber) => {
             }
         }
         if (flagForPrimeConclusion == 2) {
-            return "Not prime"
+            return "Prime"
         }
     }
 }
 
 primeNumberTesint(inputNumber);
+console.log(primeNumberTesint(5));
+console.log(primeNumberTesint(6));
