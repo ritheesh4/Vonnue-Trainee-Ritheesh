@@ -1,11 +1,10 @@
 // 3. Enter 2 strings and do the following operations
 // concatenate / reverse / reverse concat / mix the letters / split in half / remove all white spaces / add a character after every specific letter /
 
-const readline = require("readline-sync");
-const string1 = readline.question("Enter the first string : ");
-const string2 = readline.question("Enter the second string : ");
+let string1;
+let string2;
 
-const concatinate = (string1,string2) => {
+const concatinate = (string1, string2) => {
     let concatinatedResult = string1.concat(string2);
     return concatinatedResult
 }
@@ -19,10 +18,10 @@ const reverseString = () => {
     console.log("Reverse concatinated :", reverseConcat);
 }
 
-const stringMixUp = (string1,string2) => {
+const stringMixUp = (string1, string2) => {
     let stringMix = [];
     if (string1.length > string2.length) {
-        for (i = 0; i < string1.length; i++) {
+        for (let i = 0; i < string1.length; i++) {
             if (i + 1 > string2.length) {
                 stringMix = stringMix + string1[i];
             } else {
@@ -32,7 +31,7 @@ const stringMixUp = (string1,string2) => {
 
         }
     } else {
-        for (i = 0; i < string2.length; i++) {
+        for (let i = 0; i < string2.length; i++) {
             if (i + 1 > string1.length) {
                 stringMix = stringMix + string2[i];
             } else {
@@ -71,7 +70,7 @@ const spaceOfString2 = (string2) => {
 
 const string1WithExtraCharacter = (string1) => {
     let string1ExtraCharacter = []
-    for (i = 0; i < string1.length; i++) {
+    for (let i = 0; i < string1.length; i++) {
         string1ExtraCharacter[i] = string1[i].concat("$")
 
     }
@@ -81,7 +80,7 @@ const string1WithExtraCharacter = (string1) => {
 
 const string2WithExtraCharacter = (string2) => {
     let string2ExtraCharacter = []
-    for (i = 0; i < string2.length; i++) {
+    for (let i = 0; i < string2.length; i++) {
         string2ExtraCharacter[i] = string2[i].concat("$")
 
     }
