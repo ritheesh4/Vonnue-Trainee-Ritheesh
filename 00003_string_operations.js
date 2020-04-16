@@ -72,7 +72,6 @@ const string1WithExtraCharacter = (string1) => {
     let string1ExtraCharacter = []
     for (let i = 0; i < string1.length; i++) {
         string1ExtraCharacter[i] = string1[i].concat("$")
-
     }
     let string1WithExtraCharacterWithoutComma = String(string1ExtraCharacter).replace(/,/g, "");
     return string1WithExtraCharacterWithoutComma
@@ -82,7 +81,6 @@ const string2WithExtraCharacter = (string2) => {
     let string2ExtraCharacter = []
     for (let i = 0; i < string2.length; i++) {
         string2ExtraCharacter[i] = string2[i].concat("$")
-
     }
     let string2WithExtraCharacterWithoutComma = String(string2ExtraCharacter).replace(/,/g, "");
     return string2WithExtraCharacterWithoutComma
