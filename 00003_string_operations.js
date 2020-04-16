@@ -5,12 +5,12 @@ const readline = require("readline-sync");
 const string1 = readline.question("Enter the first string : ");
 const string2 = readline.question("Enter the second string : ");
 
-let concatinate = () => {
+const concatinate = () => {
     let concatinatedResult = string1.concat(string2);
-    console.log("Concatinated : ", concatinatedResult);
+    return concatinatedResult
 }
 
-let reverseString = () => {
+const reverseString = () => {
     let reverseString1 = string1.split('').reverse().join('');
     console.log("Reverse of the first string :", reverseString1);
     let reverseString2 = string2.split('').reverse().join('');
@@ -19,7 +19,7 @@ let reverseString = () => {
     console.log("Reverse concatinated :", reverseConcat);
 }
 
-let stringMixUp = () => {
+const stringMixUp = () => {
     let stringMix = [];
     if (string1.length > string2.length) {
         for (i = 0; i < string1.length; i++) {
@@ -47,28 +47,28 @@ let stringMixUp = () => {
     console.log("String mixed :", stringMixResult);
 }
 
-splitedHalfOfString1 = () => {
+const splitedHalfOfString1 = () => {
     if (string1.length % 2 == 0) {
         return string1.slice(0, string1.length / 2)
     } else return "cannot be devided."
 }
 console.log("The splited half of the first string :", splitedHalfOfString1());
 
-splitedHalfOfString2 = () => {
+const splitedHalfOfString2 = () => {
     if (string2.length % 2 == 0) {
         return string2.slice(0, string2.length / 2)
     } else return "cannot be devided."
 }
 console.log("The splited half of the second string :", splitedHalfOfString2());
 
-let spaceOfStrings = () => {
+const spaceOfStrings = () => {
     let spaceRemovedString1 = string1.replace(/ /g, "");;
     console.log("The space in the first string removed : ", spaceRemovedString1);
     let spaceRemovedString2 = string2.replace(/ /g, "");
     console.log("The space in the first string removed : ", spaceRemovedString2);
 }
 
-string1WithExtraCharacter = () => {
+const string1WithExtraCharacter = () => {
     let string1ExtraCharacter = []
     for (i = 0; i < string1.length; i++) {
         string1ExtraCharacter[i] = string1[i].concat("$")
@@ -78,7 +78,7 @@ string1WithExtraCharacter = () => {
     console.log("First string with extra character :", string1WithExtraCharacterWithoutComma);
 }
 
-string2WithExtraCharacter = () => {
+const string2WithExtraCharacter = () => {
     let string2ExtraCharacter = []
     for (i = 0; i < string2.length; i++) {
         string2ExtraCharacter[i] = string2[i].concat("$")
