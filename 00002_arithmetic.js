@@ -2,42 +2,44 @@
     add / multiply / divide / modulus / substract / greater than / less than / is equal.
 */
 
-const readLine = require("readline-sync");
-const number1 = readLine.question("Enter first Number : ");
-const number2 = readLine.question("Enter the second Number: ");
+let number1;
+let number2;
 
-let addition = (number1, number2) => {
+const addition = (number1, number2) => {
     let result = parseInt(number1) + parseInt(number2);
-    console.log("Addition:", number1, "+", number2, "=", result);
+    return result
 }
 
-let subtraction = (number1, number2) => {
+const subtraction = (number1, number2) => {
     let result = parseInt(number1) - parseInt(number2);
-    console.log("Subtraction:", number1, "-", number2, "=", result);
+    return result
 }
 
-let multiplication = (number1, number2) => {
+const multiplication = (number1, number2) => {
     let result = parseInt(number1) * parseInt(number2);
-    console.log("Multiplication:", number1, "*", number2, "=", result);
+    return result
 }
 
-let division = (number1, number2) => {
+const division = (number1, number2) => {
     let result = parseInt(number1) / parseInt(number2);
-    console.log("Division:", number1, "/", number2, "=", result);
+    return result
 }
 
-let modulus = (number1, number2) => {
+const modulus = (number1, number2) => {
     let result = parseInt(number1) % parseInt(number2);
-    console.log("Modulus:", number1, "%", number2, "=", result);
+    return result
 }
 
-let numberCompare = (number1, number2) => {
+const numberCompare = (number1, number2) => {
     if (parseInt(number1) > parseInt(number2)) {
-        console.log("First number is greater than the second number.");
+        let result = "First number is greater than the second number."
+        return result
     } else if (parseInt(number1) < parseInt(number2)) {
-        console.log("Second number is greater than the first number.");
+        let result = "Second number is greater than the first number."
+        return result
     } else if (parseInt(number1) === parseInt(number2)) {
-        console.log("Both the input numbers are the same.");
+        let result = "Both the input numbers are the same."
+        return result
     }
 }
 
