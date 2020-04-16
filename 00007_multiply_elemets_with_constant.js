@@ -1,6 +1,6 @@
 // 7. Multiple each element of an array with a constant and print the result
 
-let inputArray;
+let inputArray = [];
 
 const multiplyArrayElementsWithConstant = (inputArray) => {
     let result = [];
@@ -11,3 +11,4 @@ const multiplyArrayElementsWithConstant = (inputArray) => {
 }
 
 multiplyArrayElementsWithConstant(inputArray);
+console.log("Array multiplication with constant 5: ", multiplyArrayElementsWithConstant([1, 2, 3, 4, 5]));
