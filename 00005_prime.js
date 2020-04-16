@@ -1,11 +1,10 @@
 // 5. Enter a number and find if it's prime
 
-const readLine = require('readline-sync');
-const inputNumber = readLine.question("Input the number to check wether it is a prime number or not: ");
+let inputNumber;
 
-let primeNumberTesint = (inputNumber) => {
+const primeNumberTesint = (inputNumber) => {
     if (inputNumber < 2) {
-        console.log("The input number is not a pime.")
+        return "Not prime"
     } else {
         let flagForPrimeConclusion = 0;
         let i = 1;
@@ -13,15 +12,17 @@ let primeNumberTesint = (inputNumber) => {
             i++;
             if (i < inputNumber) {
                 if (inputNumber % i === 0) {
-                    console.log("The input number is not a prime.");
                     flagForPrimeConclusion = 1;
-                }
+                    return "Not prime"
 
+                }
             } else {
                 flagForPrimeConclusion = 2;
             }
         }
-        if (flagForPrimeConclusion == 2) { console.log("The input number is a prime."); }
+        if (flagForPrimeConclusion == 2) {
+            return "Not prime"
+        }
     }
 }
 
