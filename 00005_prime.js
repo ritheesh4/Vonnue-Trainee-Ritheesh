@@ -3,7 +3,7 @@
 const readLine = require('readline-sync');
 const inputNumber = readLine.question("Input the number to check wether it is a prime number or not: ");
 
-let primeNumberTesint = () => {
+let primeNumberTesint = (inputNumber) => {
     if (inputNumber < 2) {
         console.log("The input number is not a pime.")
     } else {
@@ -17,7 +17,9 @@ let primeNumberTesint = () => {
                     flagForPrimeConclusion = 1;
                 }
 
-            } else { flagForPrimeConclusion = 2; }
+            } else {
+                flagForPrimeConclusion = 2;
+            }
         }
         if (flagForPrimeConclusion == 2) { console.log("The input number is a prime."); }
     }
