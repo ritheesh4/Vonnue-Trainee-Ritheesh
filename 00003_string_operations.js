@@ -5,7 +5,7 @@ const readline = require("readline-sync");
 const string1 = readline.question("Enter the first string : ");
 const string2 = readline.question("Enter the second string : ");
 
-const concatinate = () => {
+const concatinate = (string1,string2) => {
     let concatinatedResult = string1.concat(string2);
     return concatinatedResult
 }
@@ -19,7 +19,7 @@ const reverseString = () => {
     console.log("Reverse concatinated :", reverseConcat);
 }
 
-const stringMixUp = () => {
+const stringMixUp = (string1,string2) => {
     let stringMix = [];
     if (string1.length > string2.length) {
         for (i = 0; i < string1.length; i++) {
@@ -44,54 +44,57 @@ const stringMixUp = () => {
 
     }
     let stringMixResult = stringMix.replace(/,/g, "");
-    console.log("String mixed :", stringMixResult);
+    return stringMixResult
 }
 
-const splitedHalfOfString1 = () => {
+const splitedHalfOfString1 = (string1) => {
     if (string1.length % 2 == 0) {
         return string1.slice(0, string1.length / 2)
     } else return "cannot be devided."
 }
-console.log("The splited half of the first string :", splitedHalfOfString1());
 
-const splitedHalfOfString2 = () => {
+const splitedHalfOfString2 = (string2) => {
     if (string2.length % 2 == 0) {
         return string2.slice(0, string2.length / 2)
     } else return "cannot be devided."
 }
-console.log("The splited half of the second string :", splitedHalfOfString2());
 
-const spaceOfStrings = () => {
-    let spaceRemovedString1 = string1.replace(/ /g, "");;
-    console.log("The space in the first string removed : ", spaceRemovedString1);
-    let spaceRemovedString2 = string2.replace(/ /g, "");
-    console.log("The space in the first string removed : ", spaceRemovedString2);
+const spaceOfString1 = (string1) => {
+    let spaceRemovedString1 = string1.replace(/ /g, "");
+    return spaceRemovedString1
 }
 
-const string1WithExtraCharacter = () => {
+const spaceOfString2 = (string2) => {
+    let spaceRemovedString2 = string2.replace(/ /g, "");
+    return spaceRemovedString2
+}
+
+const string1WithExtraCharacter = (string1) => {
     let string1ExtraCharacter = []
     for (i = 0; i < string1.length; i++) {
         string1ExtraCharacter[i] = string1[i].concat("$")
 
     }
     let string1WithExtraCharacterWithoutComma = String(string1ExtraCharacter).replace(/,/g, "");
-    console.log("First string with extra character :", string1WithExtraCharacterWithoutComma);
+    return string1WithExtraCharacterWithoutComma
 }
 
-const string2WithExtraCharacter = () => {
+const string2WithExtraCharacter = (string2) => {
     let string2ExtraCharacter = []
     for (i = 0; i < string2.length; i++) {
         string2ExtraCharacter[i] = string2[i].concat("$")
 
     }
     let string2WithExtraCharacterWithoutComma = String(string2ExtraCharacter).replace(/,/g, "");
-    console.log("Second string with extra character :", string2WithExtraCharacterWithoutComma);
+    return string2WithExtraCharacterWithoutComma
 }
 
 concatinate(string1, string2);
 reverseString(string1, string2);
 stringMixUp(string1, string2);
-splitedHalfOfString1(string1, string2);
-spaceOfStrings(string1, string2);
+splitedHalfOfString1(string1);
+splitedHalfOfString2(string2)
+spaceOfString1(string1);
+spaceOfString2(string2);
 string1WithExtraCharacter(string1);
 string2WithExtraCharacter(string2);
