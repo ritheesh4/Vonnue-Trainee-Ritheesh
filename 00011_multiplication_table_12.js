@@ -5,10 +5,10 @@ const multiplicationTable = () => {
         let tableOf = i;
         for (let j = 1; j < 11; j++) {
             let multipliedResult = tableOf * j;
-            let result = [tableOf, j, multipliedResult];  //tableOf, '*', j, '=', multipliedResult)
-            return result
+            console.log(tableOf, '*', j, '=', multipliedResult);
         }
     }
 }
 
 multiplicationTable();
+
