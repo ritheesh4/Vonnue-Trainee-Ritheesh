@@ -1,6 +1,6 @@
 // 6. Find the sum of elements in a given array. Array should be an input to the program
 
-let inputArray;
+let inputArray = [];
 
 const sumOfArrayElements = (inputArray) => {
     let result = 0;
@@ -11,3 +11,4 @@ const sumOfArrayElements = (inputArray) => {
 }
 
 sumOfArrayElements(inputArray);
+console.log("sum of arrays: ", sumOfArrayElements([5, 6, 3, 2]));
