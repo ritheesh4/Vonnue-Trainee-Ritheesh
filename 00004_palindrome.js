@@ -5,10 +5,10 @@ const inputString = readLine.question("Enter the string to check wether it is pa
 
 let palindromeTesting = (inputString) => {
     let reverseOfString = inputString.split('').reverse().join('');
-    if (inputString === reverseOfString){
-        console.log("The input string is a palindrome.");
-    }else {
-        console.log("The input string is not a palindrome.");
+    if (inputString === reverseOfString) {
+        return "Palindrome"
+    } else {
+        return "Not palindrome"
     }
 }
 
