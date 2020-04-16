@@ -2,7 +2,7 @@
 
 let inputArray;
 
-let multiplyArrayElementsWithConstant = (inputArray) => {
+const multiplyArrayElementsWithConstant = (inputArray) => {
     let result = [];
     for (let i = 0; i < inputArray.length; i++) {
         result[i] = parseFloat(inputArray[i]) * 5;
