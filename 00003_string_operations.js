@@ -1,15 +1,15 @@
 // 3. Enter 2 strings and do the following operations
 // concatenate / reverse / reverse concat / mix the letters / split in half / remove all white spaces / add a character after every specific letter /
 
-let string1;
-let string2;
+let string1 ="ab";
+let string2 ="bb";
 
 const concatinate = (string1, string2) => {
     let concatinatedResult = string1.concat(string2);
     return concatinatedResult
 }
 
-const reverseString = () => {
+const reverseString = (string1, string2) => {
     let reverseString1 = string1.split('').reverse().join('');
     console.log("Reverse of the first string :", reverseString1);
     let reverseString2 = string2.split('').reverse().join('');
@@ -86,7 +86,8 @@ const string2WithExtraCharacter = (string2) => {
     return string2WithExtraCharacterWithoutComma
 }
 
-concatinate(string1, string2);
+concatinate(string1, string2)
+console.log("concatinate", concatinate("timna", "arun"));
 reverseString(string1, string2);
 stringMixUp(string1, string2);
 splitedHalfOfString1(string1);
