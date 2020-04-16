@@ -11,3 +11,4 @@ const sum = (n) => {
 }
 
 sum(n);
+console.log("Sum of 100 numbers:",sum(100));
