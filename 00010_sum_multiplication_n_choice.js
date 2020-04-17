@@ -4,9 +4,9 @@ let n;
 let choiceOfUser; /*1.Muliplication or 2.Sum. Any other input is invalid.*/
 
 const choiseOfUserInput = (choiceOfUser, n) => {
-    if (choiceOfUser == 1) {
+    if (choiceOfUser === 1) {
         return multiplicaition(n)
-    } else if (choiceOfUser == 2) {
+    } else if (choiceOfUser === 2) {
         return sum(n)
     } else {
         return invalidInput()
