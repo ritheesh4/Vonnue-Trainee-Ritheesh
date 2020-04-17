@@ -11,6 +11,6 @@ const powerOfThreeTesting = (inputNumber) => {
     }
 }
 
-powerOfThreeTesting(inputNumber)
+powerOfThreeTesting(inputNumber);
 console.log("The input number is: ", powerOfThreeTesting(9));
 console.log("The input number is: ", powerOfThreeTesting(10));
