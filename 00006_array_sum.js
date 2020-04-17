@@ -5,7 +5,7 @@ let inputArray = [];
 const sumOfArrayElements = (inputArray) => {
     let result = 0;
     for (let i = 0; i < inputArray.length; i++) {
-        result = result + parseFloat(inputArray[i]);
+        result = result + inputArray[i];
     }
     return result
 }
