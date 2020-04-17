@@ -13,5 +13,5 @@ const sum = (n) => {
 }
 
 sum(n);
-console.log("sum of multiples of three or five of limit 10: ", sum(10))
+console.log("sum of multiples of three or five of limit 10: ", sum(10));
 
