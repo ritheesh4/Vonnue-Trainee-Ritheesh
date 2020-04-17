@@ -8,7 +8,7 @@ const checkSumOfSquares = (inputNumber) => {
     for (let i = 1; i < sqrtOfInputNumber + 1; i++) {
         for (let j = 1; j < sqrtOfInputNumber + 1; j++) {
             let squareSum = (i * i) + (j * j);
-            if (squareSum == inputNumber) {
+            if (squareSum === inputNumber) {
                 return 'True'
             }
         }
