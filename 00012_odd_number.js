@@ -3,7 +3,7 @@
 let inputNumber;
 
 const oddNumberTest = (inputNumber) => {
-    if (inputNumber % 2 == 0) {
+    if (inputNumber % 2 === 0) {
         return "Not odd. Its even."
     } else {
         return "odd"
