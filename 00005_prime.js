@@ -6,25 +6,15 @@ const primeNumberTesint = (inputNumber) => {
     if (inputNumber < 2) {
         return "Not prime"
     } else {
-        let flagForPrimeConclusion = 0;
-        let i = 1;
-        while (flagForPrimeConclusion === 0) {
-            i++;
-            if (i < inputNumber) {
-                if (inputNumber % i === 0) {
-                    flagForPrimeConclusion = 1;
-                    return "Not prime"
-                }
-            } else {
-                flagForPrimeConclusion = 2;
+        for (let i = 2; i < inputNumber; i++) {
+            if (inputNumber % i === 0) {
+                return "Not prime"
             }
         }
-        if (flagForPrimeConclusion === 2) {
-            return "Prime"
-        }
+        return "Prime"
     }
 }
 
 primeNumberTesint(inputNumber);
-console.log(primeNumberTesint(5));
+console.log(primeNumberTesint(59));
 console.log(primeNumberTesint(6));
