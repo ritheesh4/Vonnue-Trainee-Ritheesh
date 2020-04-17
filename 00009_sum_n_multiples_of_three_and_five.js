@@ -5,7 +5,7 @@ let n;
 const sum = (n) => {
     let sumOfLimit = 0;
     for (let i = 3; i < n + 1; i++) {
-        if (i % 3 == 0 || i % 5 == 0) {
+        if (i % 3 === 0 || i % 5 === 0) {
             sumOfLimit = sumOfLimit + i;
         }
     }
