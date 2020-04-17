@@ -2,7 +2,7 @@
 
 let inputNumber;
 
-const primeNumberTesint = (inputNumber) => {
+const primeNumberTest = (inputNumber) => {
     if (inputNumber < 2) {
         return "Not prime"
     } else {
@@ -15,6 +15,6 @@ const primeNumberTesint = (inputNumber) => {
     }
 }
 
-primeNumberTesint(inputNumber);
+primeNumberTest(inputNumber);
 console.log(primeNumberTesint(59));
 console.log(primeNumberTesint(6));
