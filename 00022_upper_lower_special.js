@@ -10,7 +10,7 @@ const characterType = (inputCharacter) => {
     } else if (asciiValueOfInput >= 97 && asciiValueOfInput <= 122) {
         return "Lowercase"
     } else {
-        return "Character"
+        return "Special Character"
     }
 }
 
