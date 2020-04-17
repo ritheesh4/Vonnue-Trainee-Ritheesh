@@ -1,3 +1,5 @@
+// 32. Sum of N natural numbers
+
 let result = 0;
 let n = 0;
 
