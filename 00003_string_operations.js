@@ -56,13 +56,13 @@ const stringMixUp = (string1, string2) => {
 }
 
 const splitedHalfOfString1 = (string1) => {
-    if (string1.length % 2 == 0) {
+    if (string1.length % 2 === 0) {
         return string1.slice(0, string1.length / 2)
     } else return "cannot be divided."
 }
 
 const splitedHalfOfString2 = (string2) => {
-    if (string2.length % 2 == 0) {
+    if (string2.length % 2 === 0) {
         return string2.slice(0, string2.length / 2)
     } else return "cannot be devided."
 }
