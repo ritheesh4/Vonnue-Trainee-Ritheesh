@@ -1,21 +1,31 @@
 // 3. Enter 2 strings and do the following operations
 // concatenate / reverse / reverse concat / mix the letters / split in half / remove all white spaces / add a character after every specific letter /
 
-let string1 ="ab";
-let string2 ="bb";
+let string1 = "";
+let string2 = "";
 
 const concatinate = (string1, string2) => {
     let concatinatedResult = string1.concat(string2);
     return concatinatedResult
 }
 
-const reverseString = (string1, string2) => {
+const reverseString1 = (string1) => {
     let reverseString1 = string1.split('').reverse().join('');
-    console.log("Reverse of the first string :", reverseString1);
+    return reverseString1
+}
+
+const reverseString2 = (string2) => {
     let reverseString2 = string2.split('').reverse().join('');
-    console.log("Reverse of the second string :", reverseString2);
-    let reverseConcat = reverseString1.concat(reverseString2);
-    console.log("Reverse concatinated :", reverseConcat);
+    return reverseString2
+}
+
+const reverseConcat = (string1, string2) => {
+    let result1 = reverseString1(string1);   
+    let result2 = reverseString2(string2);
+    console.log(result2);
+    console.log(result2);
+    let reverseConcat = result1.concat(result2);   
+    return reverseConcat
 }
 
 const stringMixUp = (string1, string2) => {
@@ -42,14 +52,13 @@ const stringMixUp = (string1, string2) => {
         }
 
     }
-    let stringMixResult = stringMix.replace(/,/g, "");
-    return stringMixResult
+    return stringMix
 }
 
 const splitedHalfOfString1 = (string1) => {
     if (string1.length % 2 == 0) {
         return string1.slice(0, string1.length / 2)
-    } else return "cannot be devided."
+    } else return "cannot be divided."
 }
 
 const splitedHalfOfString2 = (string2) => {
@@ -86,9 +95,10 @@ const string2WithExtraCharacter = (string2) => {
     return string2WithExtraCharacterWithoutComma
 }
 
-concatinate(string1, string2)
-console.log("concatinate", concatinate("timna", "arun"));
-reverseString(string1, string2);
+concatinate(string1, string2);
+reverseString1(string1);
+reverseString2(string2);
+reverseConcat(string1, string2);
 stringMixUp(string1, string2);
 splitedHalfOfString1(string1);
 splitedHalfOfString2(string2)
@@ -96,3 +106,15 @@ spaceOfString1(string1);
 spaceOfString2(string2);
 string1WithExtraCharacter(string1);
 string2WithExtraCharacter(string2);
+
+console.log("concatinate: ", concatinate("timna", "arun"));
+console.log("reverseString: ", reverseString1("timna"));
+console.log("reverseString: ", reverseString2("arun"));
+console.log("reverse concant: ", reverseConcat("arun", "arun"));
+console.log("stringMixup: ", stringMixUp("timna", "arun"));
+console.log("splited half of first string: ", splitedHalfOfString1("timna"));
+console.log("splited half of second string: ", splitedHalfOfString2("arun"));
+console.log("space removed first string: ", spaceOfString1("ti mna"));
+console.log("space removed second string: ", spaceOfString2("a run"));
+console.log("Extra character added in the first string: ", string1WithExtraCharacter("timna"));
+console.log("Extra character added in the second string: ", string2WithExtraCharacter("arun"));
