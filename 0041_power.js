@@ -1,3 +1,5 @@
+// 41. Find the power of a number
+
 let inputNumber;
 let powerValue;
 let result =1;
