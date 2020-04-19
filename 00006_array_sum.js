@@ -10,5 +10,4 @@ const sumOfArrayElements = (inputArray) => {
     return result
 }
 
-sumOfArrayElements(inputArray);
 console.log("sum of arrays: ", sumOfArrayElements([5, 6, 3, 2]));
