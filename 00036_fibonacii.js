@@ -1,6 +1,5 @@
 // 36. Fibonacci series up ton
 
-let n;
 let fibonacciResult = [];
 
 const fibonacci = (n) => {
@@ -14,7 +13,7 @@ const fibonacci = (n) => {
             fibonacciResult[i] = fibonacciResult[i - 1] + fibonacciResult[i - 2];
         }
     }
-    return fibonacciResult
-}
+    return fibonacciResult;
+};
 
 console.log("The fibonacci series of value n =10 : ", fibonacci(10));
