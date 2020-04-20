@@ -1,6 +1,5 @@
 // 40. Perfect number or not
 
-let inputNumber;
 let perfectNumberArray = [];
 let indexValue = 0;
 let sumOfArray = 0;
@@ -17,14 +16,14 @@ const perfectNumber = (inputNumber) => {
             sumOfArray = sumOfArray + perfectNumberArray[j];
         }
         if (sumOfArray === inputNumber) {
-            return "Perfect number"
+            return "Perfect number";
         } else {
-            return "Not perfect number"
+            return "Not perfect number";
         }
     } else {
-        return "Not perfect number"
+        return "Not perfect number";
     }
-}
+};
 
 console.log("The input number 496 is : ", perfectNumber(496));
 console.log("The input number 24 is : ", perfectNumber(24));
