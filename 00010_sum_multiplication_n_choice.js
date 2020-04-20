@@ -33,9 +33,6 @@ const invalidInput = () => {
     return "Invalid input"
 }
 
-sum(n);
-multiplicaition(n);
-choiseOfUserInput(choiceOfUser, n);
 console.log("Sum of 10 numbers", choiseOfUserInput(2, 10));
 console.log("Multiplication of 10 numbers", choiseOfUserInput(1, 10));
 console.log("Multiplication of 10 numbers", choiseOfUserInput(3, 10));
