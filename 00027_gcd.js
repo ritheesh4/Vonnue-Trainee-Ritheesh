@@ -13,5 +13,4 @@ const gcd = (number1, number2) => {
     }
 }
 
-gcd(number1, number2);
-console.log("Lcm of two numbers 98, 56: ", gcd(98, 56));
+console.log("GCD of two numbers 98 and 56: ", gcd(98, 56));
