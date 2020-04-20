@@ -11,6 +11,5 @@ const vowelOrConsonant = (inputCharacter) => {
     }
 }
 
-vowelOrConsonant(inputCharacter);
-console.log(vowelOrConsonant("a"));
-console.log(vowelOrConsonant("b"));
+console.log("The input character a is: ", vowelOrConsonant("a"));
+console.log("The input character b is : ", vowelOrConsonant("b"));
