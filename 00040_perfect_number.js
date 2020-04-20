@@ -26,6 +26,5 @@ const perfectNumber = (inputNumber) => {
     }
 }
 
-perfectNumber(inputNumber);
 console.log("The input number 496 is : ", perfectNumber(496));
 console.log("The input number 24 is : ", perfectNumber(24));
