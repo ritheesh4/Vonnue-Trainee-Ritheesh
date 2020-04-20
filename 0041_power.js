@@ -9,4 +9,4 @@ const powerOfNumber = (inputNumber, powerValue) => {
     return result;
 };
 
-console.log("The value of 4 power 5: ", powerOfNumber(4, 5));
+console.log("Result of 4 power 5: ", powerOfNumber(4, 5));
