@@ -12,6 +12,5 @@ const alphabetOrNot = (inputCharacter) => {
     }
 }
 
-alphabetOrNot(inputCharacter);
-console.log("Input character is: ", alphabetOrNot('a'));
-console.log("Input character is: ", alphabetOrNot('$'));
+console.log("Input character a is: ", alphabetOrNot('a'));
+console.log("Input character $ is: ", alphabetOrNot('$'));
