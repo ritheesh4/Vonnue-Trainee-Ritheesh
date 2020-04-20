@@ -10,5 +10,4 @@ const sum = (n) => {
     return sumOfLimit
 }
 
-sum(n);
 console.log("Sum of 100 numbers:",sum(100));
