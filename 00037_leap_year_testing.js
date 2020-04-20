@@ -10,6 +10,5 @@ const leapYearTest = (inputYear) => {
     }
 }
 
-leapYearTest(inputYear);
 console.log("The input year 2024 is : ", leapYearTest(2024));
 console.log("The input year 1900 is : ", leapYearTest(1900));
