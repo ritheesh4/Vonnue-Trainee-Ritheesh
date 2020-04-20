@@ -11,5 +11,4 @@ const factorial = (inputNumber) => {
     return factorialResult
 }
 
-factorial(inputNumber);
-console.log("Factorial of input number 5: ", factorial(5));
+console.log("Factorial of the input number 5: ", factorial(5));
