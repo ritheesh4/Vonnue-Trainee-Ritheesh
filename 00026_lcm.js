@@ -13,5 +13,4 @@ const lcm = (number1, number2) => {
     }
 }
 
-lcm(number1, number2);
-console.log("Lcm of two numbers 15, 25:", lcm(15, 25));
+console.log("Lcm of two numbers 15 and 25:", lcm(15, 25));
