@@ -18,5 +18,4 @@ const leapYears = (currentYear) => {
     } return leapYearsArray
 }
 
-leapYears(currentYear);
-console.log(leapYears(2020));
+console.log("Next 20 leap years from 2020: ", leapYears(2020));
