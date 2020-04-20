@@ -16,6 +16,5 @@ const checkSumOfSquares = (inputNumber) => {
     return 'False'
 }
 
-checkSumOfSquares(inputNumber);
 console.log("The input number can be expressed as sum of squares of two whole numbers:", checkSumOfSquares(5));
 console.log("The input number can be expressed as sum of squares of two whole numbers:", checkSumOfSquares(6));
