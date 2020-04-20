@@ -14,5 +14,4 @@ const numberOfDigits = (inputNumber) => {
     return numberOfDigit
 }
 
-numberOfDigits(inputNumber);
 console.log("Number of digitis in input : 986745 : ", numberOfDigits(986745));
