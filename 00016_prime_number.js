@@ -1,9 +1,8 @@
-// 16. Write a program that prints all prime numbers. (Note: if your programming language does not support arbitrary size numbers, printing all primes up to the largest number you can easily represent is fine too.)
+// 16. Write a program that prints all prime numbers. (Note: if your programming language does not support arbitrary size numbers, printing all primes up to the largest number you can easily represent is fine too.)
 
 let primeNumberArray = [];
 let primeNumberArrayIndexValue = 1;
 let primaryNumberFlag = 0;
-let limit;
 
 const primeNumbers = (limit) => {
     for (let limitingLoop = 2; limitingLoop <= limit; limitingLoop++) {
@@ -11,7 +10,7 @@ const primeNumbers = (limit) => {
             primeNumberArray[0] = 2;
         } else {
             primeNumberArray[0] = 2;
-            for (individualNumber = 2; individualNumber < limitingLoop; individualNumber++) {
+            for (let individualNumber = 2; individualNumber < limitingLoop; individualNumber++) {
                 if (limitingLoop % individualNumber === 0) {
                     primaryNumberFlag = 1;
                     break;
@@ -25,7 +24,7 @@ const primeNumbers = (limit) => {
             }
         }
     }
-    return primeNumberArray
-}
+    return primeNumberArray;
+};
 
 console.log(primeNumbers(50));
