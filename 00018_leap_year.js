@@ -1,7 +1,6 @@
 // 18. Write a program that prints the next 20 leap years.
 
 let leapYearsArray = [];
-let currentYear = 0;
 
 const leapYears = (currentYear) => {
     let yearsPrinted = 0;
@@ -15,7 +14,7 @@ const leapYears = (currentYear) => {
         } else {
             currentYear++;
         }
-    } return leapYearsArray
-}
+    } return leapYearsArray;
+};
 
 console.log("Next 20 leap years from 2020: ", leapYears(2020));
