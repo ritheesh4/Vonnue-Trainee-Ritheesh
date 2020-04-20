@@ -2,11 +2,11 @@
 
 const multiplicationTable = () => {
     for (let i = 1; i < 13; i++) {
-        let tableOf = i;
         for (let j = 1; j < 11; j++) {
-            let multipliedResult = tableOf * j;
-            console.log(tableOf, '*', j, '=', multipliedResult);
+            let multipliedResult = i * j;
+            console.log(i, "*", j, '=', multipliedResult);
         }
+        console.log('\n');
     }
 }
 
