@@ -10,7 +10,6 @@ const oddNumberTest = (inputNumber) => {
     }
 }
 
-oddNumberTest(inputNumber);
-console.log("The input number is: ",oddNumberTest(3));
-console.log("The input number is: ",oddNumberTest(4));
+console.log("The input number 3 is: ",oddNumberTest(3));
+console.log("The input number 4 is: ",oddNumberTest(4));
 
