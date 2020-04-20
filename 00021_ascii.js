@@ -8,6 +8,5 @@ const asciiValue = (inputCharacter) => {
     return asciiValueOfInput
 }
 
-asciiValue(inputCharacter);
-console.log("Input character is: ", asciiValue('a'));
-console.log("Input character is: ", asciiValue('$'));
+console.log("ASCII value of the input character a is: ", asciiValue('d'));
+console.log("ASCII value of the input $ is: ", asciiValue('$'));
