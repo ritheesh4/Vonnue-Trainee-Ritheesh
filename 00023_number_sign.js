@@ -1,14 +1,12 @@
 // 23. Write a program to check a number is positive or negative
 
-let inputNumber;
-
 const singOfNumber = (inputNumber) => {
     if (inputNumber >= 0) {
-        return "Positive"
+        return "Positive";
     } else {
-        return "Negative"
+        return "Negative";
     }
-}
+};
 
 console.log("The input number -1 is: ", singOfNumber(-1));
 console.log("The input number 8 is: ", singOfNumber(8));
