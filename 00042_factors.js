@@ -1,6 +1,5 @@
 // 42. Find all Factors of a number
 
-let inputNumber = 0;
 let result;
 let resultArray = [];
 let arrayIndex = 0;
