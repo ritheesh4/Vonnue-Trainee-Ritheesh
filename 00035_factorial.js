@@ -1,6 +1,5 @@
 // 35. Factorial of a number
 
-let inputNumber = 0;
 let factorialResult = 0;
 
 const factorial = (inputNumber) => {
@@ -8,7 +7,7 @@ const factorial = (inputNumber) => {
     for (let i = inputNumber; i > 1; i--) {
         factorialResult = factorialResult * (i - 1);
     }
-    return factorialResult
-}
+    return factorialResult;
+};
 
 console.log("Factorial of the input number 5: ", factorial(5));
