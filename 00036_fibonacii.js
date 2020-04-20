@@ -17,5 +17,4 @@ const fibonacci = (n) => {
     return fibonacciResult
 }
 
-fibonacci(n);
 console.log("The fibonacci series of value n =10 : ", fibonacci(10));
