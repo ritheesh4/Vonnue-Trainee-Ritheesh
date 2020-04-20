@@ -1,6 +1,5 @@
 // 30. Number of digits in an integer
 
-let inputNumber = 0;
 let numberOfDigit = 0;
 
 const numberOfDigits = (inputNumber) => {
@@ -11,7 +10,7 @@ const numberOfDigits = (inputNumber) => {
         inputNumber /= 10;
         numberOfDigit++;
     }
-    return numberOfDigit
-}
+    return numberOfDigit;
+};
 
-console.log("Number of digitis in input : 986745 : ", numberOfDigits(986745));
+console.log("Number of digits in input : 986745 : ", numberOfDigits(986745));
