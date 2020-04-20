@@ -14,7 +14,6 @@ const characterType = (inputCharacter) => {
     }
 }
 
-characterType(inputCharacter);
-console.log("Input character is: ", characterType('a'));
-console.log("Input character is: ", characterType('$'));
-console.log("Input character is: ", characterType('A'));
+console.log("Input character a is: ", characterType('a'));
+console.log("Input $ is: ", characterType('$'));
+console.log("Input character A is: ", characterType('A'));
