@@ -8,7 +8,7 @@ const multiplicationTable = () => {
         }
         console.log('\n');
     }
-}
+};
 
 multiplicationTable();
 
