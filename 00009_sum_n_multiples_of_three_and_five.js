@@ -2,7 +2,7 @@
 
 let n;
 
-const sum = (n) => {
+const sumOfThreeFive = (n) => {
     let sumOfLimit = 0;
     for (let i = 3; i < n + 1; i++) {
         if (i % 3 === 0 || i % 5 === 0) {
@@ -12,6 +12,5 @@ const sum = (n) => {
     return sumOfLimit
 }
 
-sum(n);
-console.log("sum of multiples of three or five of limit 10: ", sum(10));
+console.log("sum of multiples of three or five of limit 10: ", sumOfThreeFive(10));
 
