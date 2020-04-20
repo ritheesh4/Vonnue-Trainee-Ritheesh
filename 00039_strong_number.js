@@ -31,6 +31,5 @@ const strongNumber = (inputNumber) => {
     }
 }
 
-strongNumber(inputNumber);
-console.log("Sum of digits of input number 145: ", strongNumber(145));
-console.log("Sum of digits of input number 36: ", strongNumber(36));
+console.log("Input number 145: ", strongNumber(145));
+console.log("Input number 36: ", strongNumber(36));
