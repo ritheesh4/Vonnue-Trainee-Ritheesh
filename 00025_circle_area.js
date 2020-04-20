@@ -8,5 +8,4 @@ const areaOfCircle = (radius) => {
     return area
 }
 
-areaOfCircle(radius);
-console.log("Area of circle:", areaOfCircle(5));
+console.log("Area of circle with radius 5 cm is :", areaOfCircle(5),"cm^2");
