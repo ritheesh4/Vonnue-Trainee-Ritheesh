@@ -9,6 +9,4 @@ const multiplyArrayElementsWithConstant = (inputArray) => {
     }
     return result
 }
-
-multiplyArrayElementsWithConstant(inputArray);
 console.log("Array multiplication with constant : ", multiplyArrayElementsWithConstant([1, 2, 3, 4, 5]));
