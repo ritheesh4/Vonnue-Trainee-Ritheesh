@@ -11,5 +11,4 @@ const sumOfDigits = (inputNumber) => {
     return sum
 }
 
-sumOfDigits(inputNumber);
 console.log("Sum of digits of input number 345: ", sumOfDigits(345));
