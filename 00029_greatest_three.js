@@ -20,5 +20,4 @@ const greatestOfThree = (number1, number2, number3) => {
     }
 }
 
-greatestOfThree(number1, number2, number3);
-console.log("The greatest number of 11, 54, 22 is : ", greatestOfThree(11, 54, 22));
+console.log("The greatest number among 11, 54 and 22 is : ", greatestOfThree(11, 54, 22));
