@@ -11,5 +11,4 @@ const greatestOfTwo = (number1, number2) => {
     }
 }
 
-greatestOfTwo(number1, number2);
-console.log("The greatest number of 5,10 is : ", greatestOfTwo(5, 10));
+console.log("The greatest number among 5 and 10 is : ", greatestOfTwo(5, 10));
