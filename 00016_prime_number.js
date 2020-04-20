@@ -28,5 +28,4 @@ const primeNumbers = (limit) => {
     return primeNumberArray
 }
 
-primeNumbers(limit);
 console.log(primeNumbers(50));
