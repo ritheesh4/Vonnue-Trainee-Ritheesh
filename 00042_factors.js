@@ -25,5 +25,4 @@ const factors = (inputNumber) => {
     return resultArray
 }
 
-factors(inputNumber);
 console.log("factors of 12: ", factors(12));
