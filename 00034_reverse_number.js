@@ -12,5 +12,4 @@ const reverseNumber = (inputNumber) => {
     return reverseResult
 }
 
-reverseNumber(inputNumber);
 console.log("The revers of input number 256: ", reverseNumber(256));
