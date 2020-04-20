@@ -10,8 +10,7 @@ const singOfNumber = (inputNumber) => {
     }
 }
 
-singOfNumber(inputNumber);
-console.log("The input number is: ", singOfNumber(-1));
-console.log("The input number is: ", singOfNumber(8));
-console.log("The input number is: ", singOfNumber(0));
-console.log("The input number is: ", singOfNumber(0.31));
+console.log("The input number -1 is: ", singOfNumber(-1));
+console.log("The input number 8 is: ", singOfNumber(8));
+console.log("The input number -4 is: ", singOfNumber(-4));
+console.log("The input number 0.31 is: ", singOfNumber(0.31));
