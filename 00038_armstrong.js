@@ -1,19 +1,22 @@
 // 38. Armstrong number or not
 
-const checkArmstrong = (inputNumber) => {
-    let sqrt = Math.cbrt(inputNumber);
-    let cbrtOfInputNumber = Math.floor(sqrt);
-    for (let i = 1; i < cbrtOfInputNumber + 1; i++) {
-        for (let j = 1; j < cbrtOfInputNumber + 1; j++) {
-            for (let k = 0; k < cbrtOfInputNumber; k++) {
-                if (((i * i * i) + (j * j * j) + (k * k * k)) === inputNumber) {
-                    return "True";
-                }
-            }
-        }
+const armstrongNumbers = (inputNumber) => {
+    let addition = 0;
+    let remainder = 0;
+    let duplicate = inputNumber;
+
+    while (inputNumber > 0) {
+        remainder = inputNumber % 10;
+        addition = addition + remainder * remainder * remainder;
+        inputNumber = parseInt(inputNumber / 10);
     }
-    return 'False';
+
+    if (addition === duplicate) {
+        return "Armstrong number";
+    } else {
+        return "Not armstrong number";
+    }
 };
 
-console.log("The input number 371 is armstrong number:", checkArmstrong(371));
-console.log("The input number 150 is armstrong number:", checkArmstrong(150));
+console.log("Armstrong number between the interval :", armstrongNumbers(153));
+console.log("Armstrong number between the interval :", armstrongNumbers(13));
