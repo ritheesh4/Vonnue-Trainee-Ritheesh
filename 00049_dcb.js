@@ -1,4 +1,4 @@
-// 48. Binary to decimal conversion
+// 49. Decimal to binary conversion
 
 const dcb = (inputNumber) => {
     return inputNumber.toString(2);
