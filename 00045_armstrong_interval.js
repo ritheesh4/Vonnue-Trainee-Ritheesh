@@ -9,7 +9,6 @@ const armstrongInterval = (lowerLimit, upperLimit) => {
 
     for (let i = lowerLimit; i <= upperLimit; i++) {
         currentNumber = i;
-
         while (currentNumber > 0) {
             remainder = currentNumber % 10;
             addition = addition + remainder * remainder * remainder;
