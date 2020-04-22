@@ -1,22 +1,29 @@
 // 45. Armstrong numbers between two intervals
 
-const armstrongNumbers = (inputNumber) => {
+const armstrongInterval = (lowerLimit, upperLimit) => {
     let addition = 0;
-    let remainder = 0;
-    let duplicate = inputNumber;
+    let indexValue = 0;
+    let remainder;   
+    let result = [];
+    let currentNumber;
 
-    while (inputNumber > 0) {
-        remainder = inputNumber % 10;
-        addition = addition + remainder * remainder * remainder;
-        inputNumber = parseInt(inputNumber / 10);
-    }
+    for (let i = lowerLimit; i <= upperLimit; i++) {
+        currentNumber = i;
 
-    if (addition === duplicate) {
-        return "Armstrong number";
-    } else {
-        return "Not armstrong number";
+        while (currentNumber > 0) {
+            remainder = currentNumber % 10;
+            addition = addition + remainder * remainder * remainder;
+            currentNumber = parseInt(currentNumber / 10);
+        }
+
+        if (addition === i) {
+            result[indexValue] = addition;
+            indexValue++;
+        }
+        addition = 0;
     }
+    return result;
+
 };
 
-console.log("Armstrong number between the interval :", armstrongNumbers(153));
-console.log("Armstrong number between the interval :", armstrongNumbers(13));
+console.log("Armstrong number between the interval 0 and 370 :", armstrongInterval(0, 370));
