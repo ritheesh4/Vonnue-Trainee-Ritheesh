@@ -2,8 +2,7 @@
 
 const threeOccurance = (n) => {
     let presenceCount = 0;
-    for (let i = 0; i < n; i++) {
-        
+    for (let i = 0; i < n; i++) {        
         let num = i;        
         if (num.toString().indexOf('3') > -1) {
             presenceCount++;
