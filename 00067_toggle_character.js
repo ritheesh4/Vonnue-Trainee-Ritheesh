@@ -9,7 +9,7 @@ const toggleCharacter = (list) => {
             list[i] = list[i].toLowerCase();
         }
     }
-    return list
-}
+    return list;
+};
 
-console.log("Tolgge character of list ['a', 'B', 'e', 'R', 'w'] =", toggleCharacter(['a', 'B', 'e', 'R', 'w']))
+console.log("Tolgge character of list ['a', 'B', 'e', 'R', 'w'] =", toggleCharacter(['a', 'B', 'e', 'R', 'w']));
