@@ -20,7 +20,6 @@ const nineDivisors = (limit) => {
         } else {
             return numberOfIntegers
         }
-
     }
 }
 
