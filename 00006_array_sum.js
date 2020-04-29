@@ -8,4 +8,4 @@ const sumOfArrayElements = (inputArray) => {
     return result;
 };
 
-console.log("sum of array elements: ", sumOfArrayElements([5, 6, 3, 2]));
+console.log("sum of array elements:[5, 6, 3, 2]= ", sumOfArrayElements([5, 6, 3, 2]));
