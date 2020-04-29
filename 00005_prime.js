@@ -15,6 +15,5 @@ const primeNumberTest = (inputNumber) => {
     }
 }
 
-primeNumberTest(inputNumber);
 console.log(primeNumberTesint(59));
 console.log(primeNumberTesint(6));
