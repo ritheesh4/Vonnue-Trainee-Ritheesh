@@ -43,15 +43,9 @@ const numberCompare = (number1, number2) => {
     }
 }
 
-addition(number1, number2);
 console.log("addition", addition(10, 4));
-subtraction(number1, number2);
 console.log("subtraction", subtraction(10, 4));
-multiplication(number1, number2);
 console.log("multiplication", multiplication(10, 4))
-division(number1, number2);
 console.log("division", division(10, 4));
-modulus(number1, number2);
 console.log("modulus", modulus(10, 4));
-numberCompare(number1, number2);
 console.log("compare", numberCompare(10, 4));
