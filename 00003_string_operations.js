@@ -87,7 +87,7 @@ const stringWithExtraCharacter = (string1, string2) => {
 
 console.log("concatinate: ", concatinate("timna", "arun"));
 console.log("reverseString: ", reverseString("timna", "arun"));
-console.log("reverse concant: ", reverseConcat("arun", "arun"));
+console.log("reverse concant: ", reverseConcat("arun", "timna"));
 console.log("stringMixup: ", stringMixUp("timna", "arun"));
 console.log("splited half of both first and second string: ", splitedHalfOfString("timna", "arun"));
 console.log("space removed both strings: ", spaceOfStringRemove("ti mna", "a run"));
