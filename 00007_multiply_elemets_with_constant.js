@@ -7,4 +7,4 @@ const multiplyArrayElementsWithConstant = (inputArray) => {
     }
     return result;
 };
-console.log("Array multiplication with constant '5' : ", multiplyArrayElementsWithConstant([1, 2, 3, 4, 5]));
+console.log("Array [1, 2, 3, 4, 5] multiplication with constant '5' : ", multiplyArrayElementsWithConstant([1, 2, 3, 4, 5]));
