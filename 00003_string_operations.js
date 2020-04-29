@@ -65,13 +65,13 @@ const splitedHalfOfString = (string1, string2) => {
 };
 
 
-const spaceOfStringRemove = (string1, string2) => {
+const spaceRemove = (string1, string2) => {
     let spaceRemovedString1 = string1.replace(/ /g, "");
     let spaceRemovedString2 = string2.replace(/ /g, "");
     return [spaceRemovedString1, spaceRemovedString2];
 };
 
-const stringWithExtraCharacter = (string1, string2) => {
+const stringCharacter = (string1, string2) => {
     let string1ExtraCharacter = [];
     for (let i = 0; i < string1.length; i++) {
         string1ExtraCharacter[i] = string1[i].concat("$");
@@ -85,10 +85,10 @@ const stringWithExtraCharacter = (string1, string2) => {
     return [string1Result, string2Result];
 };
 
-console.log("concatinate: ", concatinate("timna", "arun"));
-console.log("reverseString: ", reverseString("timna", "arun"));
-console.log("reverse concant: ", reverseConcat("arun", "timna"));
-console.log("stringMixup: ", stringMixUp("timna", "arun"));
-console.log("splited half of both first and second string: ", splitedHalfOfString("timna", "arun"));
-console.log("space removed both strings: ", spaceOfStringRemove("ti mna", "a run"));
-console.log("Extra character added in the first string: ", stringWithExtraCharacter("timna", "arun"));
+console.log("concatinate of timna and arun: ", concatinate("timna", "arun"));
+console.log("reverseString of timna and arun: ", reverseString("timna", "arun"));
+console.log("reverse concant of timna and arun: ", reverseConcat("timna", "arun"));
+console.log("stringMixup of timna and arun: ", stringMixUp("timna", "arun"));
+console.log("splited half of timna and arun: ", splitedHalfOfString("timna", "arun"));
+console.log("space removed both strings ti mna and a run: ", spaceRemove("ti mna", "a run"));
+console.log("Extra character added in timna and arun: ", stringCharacter("timna", "arun"));
