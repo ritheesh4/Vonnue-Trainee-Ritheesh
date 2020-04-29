@@ -17,7 +17,6 @@ const frequency = (input) => {
                 let repeatingValue = inputString[i];
                 resultArray[index] = [repeatingValue, count];
 
-
                 for (let k = 0; k < count; k++) {
                     let repeatedValue = inputString.indexOf(repeatingValue);
                     if (repeatedValue > -1) {
