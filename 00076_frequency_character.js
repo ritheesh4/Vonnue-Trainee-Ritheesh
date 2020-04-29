@@ -1,31 +1,38 @@
 // 76. Frequency of characters in a string
 
 const frequency = (input) => {
-    let inputString = input.split('')
-    console.log(inputString)
+    let inputString = input.split('');
     let resultArray = [];
+    let i = 0;
     let index = 0;
     let count = 1;
-    for (let i = 0; i < inputString.length; i++) {
 
-        for (j = i; j < inputString.length; j++) {
+    while (inputString.length > 0) {
+        for (let j = i; j < inputString.length; j++) {
             if (inputString[i] == inputString[j + 1]) {
-                console.log("True")
                 count++
-                console.log(count)
             }
+
             if (j === inputString.length - 1) {
-                resultArray[index] = count;
-                index++
+                let repeatingValue = inputString[i];
+                resultArray[index] = [repeatingValue, count];
+
+
+                for (let k = 0; k < count; k++) {
+                    let repeatedValue = inputString.indexOf(repeatingValue);
+                    if (repeatedValue > -1) {
+                        inputString.splice(repeatedValue, 1);
+                    }
+                }
+
+                index++;
                 count = 1;
             }
-
-
         }
-        inputString.shift()
-        console.log(inputString)
     }
-    console.log(resultArray)
-}
+    return (resultArray);
 
-frequency("tttt")
+};
+
+console.log("Frequency of characters in the string ritheesh= ", frequency("ritheesh"));
+console.log('\n', "Frequency of characters in the string eeeettttttthhefrrrr= ", frequency("eeeettttttthhefrrrr"));
