@@ -18,7 +18,6 @@ const nonRepeating = (input) => {
                 let repeatingValue = inputString[0];
                 countArray[index] = [repeatingValue, count];
 
-
                 for (let k = 0; k < count; k++) {
                     let repeatedValue = inputString.indexOf(repeatingValue);
                     if (repeatedValue > -1) {
