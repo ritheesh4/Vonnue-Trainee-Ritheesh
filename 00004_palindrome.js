@@ -11,7 +11,6 @@ const palindromeTesting = (inputString) => {
     }
 }
 
-palindromeTesting(inputString);
 console.log(palindromeTesting("malayalam"));
 console.log(palindromeTesting("ritheesh"));
 
