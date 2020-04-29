@@ -4,19 +4,18 @@ const nonRepeating = (input) => {
     let inputString = input.split('');
     let resultArray = [];
     let countArray = [];
-    let i = 0;
     let index = 0;
     let indexResult = 0;
     let count = 1;
 
     while (inputString.length > 0) {
-        for (let j = i; j < inputString.length; j++) {
-            if (inputString[i] == inputString[j + 1]) {
-                count++
+        for (let j = 0; j < inputString.length; j++) {
+            if (inputString[0] == inputString[j + 1]) {
+                count++;
             }
 
             if (j === inputString.length - 1) {
-                let repeatingValue = inputString[i];
+                let repeatingValue = inputString[0];
                 countArray[index] = [repeatingValue, count];
 
 
@@ -36,7 +35,7 @@ const nonRepeating = (input) => {
     for (let l = 0; l < countArray.length; l++) {
         if (countArray[l][1] === 1) {
             resultArray[indexResult] = countArray[l][0];
-            indexResult++
+            indexResult++;
 
         }
     }
