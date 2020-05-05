@@ -104,6 +104,29 @@ const removeStudent = (className, id, studentName) => {
     }
 }
 
+const deleteSubEntry = (subject) => {
+    for (let i = 0; i < studentsList.students.length; i++) {
+        for (let j = 0; j < studentsList.students[i].marks.length; j++) {
+            if (studentsList.students[i].marks[j].subject === subject) {
+                // console.log(studentsList.students[i].marks)
+                // console.log(i)
+                // console.log("hi")
+                studentsList.students[i].marks = studentsList.students[i].marks.slice(0, i).concat(studentsList.students[i].marks.slice(i + 1, studentsList.students[i].marks.length));
+
+                fs.writeFile("studentsList.json", JSON.stringify(studentsList), err => {
+                    if (err) throw err;
+                    console.log("Done writing");
+                });
+
+            }
+
+
+        }
+    }
+
+
+}
+
 const addDivision = (name, teacherName, students) => {
     let divisionInput = {
         name: name,
@@ -127,4 +150,6 @@ const addDivision = (name, teacherName, students) => {
 // editMarks(54, "Biology", 70);
 // changeClassTeacher("class A","Anoop");
 
-removeStudent("class A", 56, "renjisha")
+// removeStudent("class A", 56, "renjisha")
+
+deleteSubEntry("malayalam")
