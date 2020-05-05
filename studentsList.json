@@ -4,29 +4,25 @@
     "students": [
         {
             "name": "ritheesh",
-            "id": 53,
+            "id": 55,
             "marks": [
                 {
+                    "subject": "malaylam",
+                    "mark": 100
+                },
+                {
                     "subject": "english",
-                    "mark": 100
-                },
-                {
-                    "subject": "malayalam",
-                    "mark": 100
-                },
-                {
-                    "subject": "physics",
-                    "mark": 90
+                    "mark": 60
                 },
                 {
                     "subject": "Biology",
-                    "mark": 90
+                    "mark": 70
                 }
             ]
         },
         {
             "name": "renjisha",
-            "id": 54,
+            "id": 56,
             "marks": [
                 {
                     "subject": "malaylam",

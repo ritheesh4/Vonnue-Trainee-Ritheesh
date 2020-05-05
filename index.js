@@ -10,9 +10,7 @@
 // 9. Find the average mark for a given subject
 // 10. Sort and display the list of students in any order
 //  - ordered by name, mark etc
-
 //  Extra things
-
 // 1. Find the total mark for a student and save it in the user object
 
 const fs = require("fs");
@@ -80,8 +78,8 @@ const editMarks = (id, subject, marks) => {
 }
 
 const changeClassTeacher = (className, newTeacherName) => {
-    if( studentsList.name === className){
-        studentsList.teacherName =newTeacherName;
+    if (studentsList.name === className) {
+        studentsList.teacherName = newTeacherName;
 
         fs.writeFile("studentsList.json", JSON.stringify(studentsList), err => {
             if (err) throw err;
@@ -90,7 +88,21 @@ const changeClassTeacher = (className, newTeacherName) => {
     }
 }
 
+const removeStudent = (className, id, studentName) => {
+    // objectLength = Object.keys(studentsList).length;
+    for (let i = 0; i < studentsList.students.length; i++) {
+        if (studentsList.students[i].name == studentName) {
+            studentsList.students = studentsList.students.slice(0, i).concat(studentsList.students.slice(i + 1, studentsList.students.length));
 
+            fs.writeFile("studentsList.json", JSON.stringify(studentsList), err => {
+                if (err) throw err;
+                console.log("Done writing");
+            });
+
+
+        }
+    }
+}
 
 const addDivision = (name, teacherName, students) => {
     let divisionInput = {
@@ -113,4 +125,6 @@ const addDivision = (name, teacherName, students) => {
 // subjectForMultipleStudents("Biology", [[53, 90], [54, 80]]);
 
 // editMarks(54, "Biology", 70);
-changeClassTeacher("class A","Anoop")
+// changeClassTeacher("class A","Anoop");
+
+removeStudent("class A", 56, "renjisha")
