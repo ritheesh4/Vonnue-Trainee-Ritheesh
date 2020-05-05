@@ -1,0 +1,46 @@
+{
+    "name": "class A",
+    "teacherName": "Mary",
+    "students": [
+        {
+            "name": "ritheesh",
+            "id": 53,
+            "marks": [
+                {
+                    "subject": "english",
+                    "mark": 100
+                },
+                {
+                    "subject": "malayalam",
+                    "mark": 100
+                },
+                {
+                    "subject": "physics",
+                    "mark": 90
+                },
+                {
+                    "subject": "Biology",
+                    "mark": 90
+                }
+            ]
+        },
+        {
+            "name": "renjisha",
+            "id": 54,
+            "marks": [
+                {
+                    "subject": "malaylam",
+                    "mark": 100
+                },
+                {
+                    "subject": "english",
+                    "mark": 100
+                },
+                {
+                    "subject": "Biology",
+                    "mark": 80
+                }
+            ]
+        }
+    ]
+}

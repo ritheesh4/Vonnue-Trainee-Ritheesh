@@ -1,1 +1,22 @@
-[{"name":"Class A","teacherName":"Renjisha e rajan","students":["ritheesh","renjith","anandhu","rupesh"]},{"name":"Class A","teacherName":"Renjisha e rajan","students":["ritheesh","renjith","anandhu","rupesh"]}]
+[
+    {
+        "name": "Class A",
+        "teacherName": "Renjisha e rajan",
+        "students": []
+    },
+    {
+        "name": "Class A",
+        "teacherName": "Renjisha e rajan",
+        "students": []
+    },
+    {
+        "name": "Class A",
+        "teacherName": "Renjisha e rajan",
+        "students": [
+            "ritheesh",
+            "renjith",
+            "anandhu",
+            "rupesh"
+        ]
+    }
+]

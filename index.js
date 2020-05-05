@@ -1,41 +1,71 @@
+// 1. Add student
+//     1. It should accept name, id
+// 2. Enter mark for a student
+// 3. Enter mark for a subject for multiple students
+// 4. Edit mark for a particular subject of a student
+// 5. Change the class teacher of a class
+// 6. Remove a student from a class
+// 7. Delete a subject entry from every students
+// 8.  Find the topper of a class given a subject
+// 9. Find the average mark for a given subject
+// 10. Sort and display the list of students in any order
+//  - ordered by name, mark etc
+
+//  Extra things
+
+// 1. Find the total mark for a student and save it in the user object
+
 const fs = require("fs");
-const users = require("./users.json");
-const division = require("./division.json")
+const studentsList = require("./studentsList.json");
+const division = require("./division.json");
+const classObject = require("./classObj.json");
 
 const addStudent = (name, id) => {
-    let user = {
+    let studentsDetails = {
         name: name,
         id: id,
         marks: []
     };
-    users.push(user);
 
-    fs.writeFile("users.json", JSON.stringify(users), err => {
+    fs.readFile('studentsList.json', function (err, data) {
+        let json = JSON.parse(data);
+        console.log("json", json)
+        json.students.push(studentsDetails);
+        fs.writeFile("studentsList.json", JSON.stringify(json), function (err) {
+            if (err) throw err;
+            console.log('The "data to append" was appended to file!');
+        });
+    })
+}
+
+const marksForStudent = (id, subject, mark) => {
+    let index = studentsList.students.findIndex(obj => obj.id == id);
+    console.log(index);
+    let marksDetails = {
+        subject: subject,
+        mark: mark
+    };
+
+    studentsList.students[index].marks.push(marksDetails);
+    fs.writeFile("studentsList.json", JSON.stringify(studentsList), err => {
         if (err) throw err;
         console.log("Done writing");
-        console.log(users)
     });
 }
 
-const marks = (id, subject, mark) => {
-    let index = users.findIndex(obj => obj.id == id);
-    let marksDetails = {
-        subject: subject,
-        mark: mark,
+const subjectForMultipleStudents = (subject, idMarksPair) => {
+    console.log(idMarksPair.length);
 
-    };
+    for (let i = 0; i < idMarksPair.length; i++) {
+        marksForStudent(idMarksPair[i][0], subject, idMarksPair[i][1]);
 
-    users[index].marks.push(marksDetails);
-    fs.writeFile("users.json", JSON.stringify(users), err => {
-        if (err) throw err;
-        console.log("Done writing");
-    });
+    }
 }
 
 const editMarks = (id, subject, marks) => {
-    let index = users.findIndex(obj => obj.id == id);
+    let index = studentsList.findIndex(obj => obj.id == id);
     console.log("index", index)
-    let allObjects = users[index];
+    let allObjects = studentsList[index];
     console.log("all objects", allObjects)
     let correspondingObject = allObjects.marks;
     console.log("corresopondign objects", correspondingObject);
@@ -51,7 +81,7 @@ const editMarks = (id, subject, marks) => {
     }
 
 
-    fs.writeFile("users.json", JSON.stringify(users), err => {
+    fs.writeFile("studentsList.json", JSON.stringify(studentsList), err => {
         if (err) throw err;
         console.log("Done writing");
     });
@@ -74,4 +104,7 @@ const addDivision = (name, teacherName, students) => {
     });
 }
 
-addDivision("Class A", "Renjisha e rajan", ["ritheesh", "renjith", "anandhu", "rupesh"]);
+// addDivision("Class A", "Renjisha e rajan", ["ritheesh", "renjith", "anandhu", "rupesh"]);
+// console.log("class object =",classObject.students[0].name);
+
+subjectForMultipleStudents("Biology", [[53, 90], [54, 80]]);
