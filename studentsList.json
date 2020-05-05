@@ -1,6 +1,6 @@
 {
     "name": "class A",
-    "teacherName": "Mary",
+    "teacherName": "Anoop",
     "students": [
         {
             "name": "ritheesh",
@@ -34,11 +34,11 @@
                 },
                 {
                     "subject": "english",
-                    "mark": 100
+                    "mark": 60
                 },
                 {
                     "subject": "Biology",
-                    "mark": 80
+                    "mark": 70
                 }
             ]
         }

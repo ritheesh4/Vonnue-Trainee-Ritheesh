@@ -40,7 +40,6 @@ const addStudent = (name, id) => {
 
 const marksForStudent = (id, subject, mark) => {
     let index = studentsList.students.findIndex(obj => obj.id == id);
-    console.log(index);
     let marksDetails = {
         subject: subject,
         mark: mark
@@ -53,7 +52,7 @@ const marksForStudent = (id, subject, mark) => {
     });
 }
 
-const subjectForMultipleStudents = (subject, idMarksPair) => {
+const subjectForMultipleStudents = (subject, idMarksPair) => {//[[53, 90], [54, 80]]
     console.log(idMarksPair.length);
 
     for (let i = 0; i < idMarksPair.length; i++) {
@@ -63,16 +62,10 @@ const subjectForMultipleStudents = (subject, idMarksPair) => {
 }
 
 const editMarks = (id, subject, marks) => {
-    let index = studentsList.findIndex(obj => obj.id == id);
-    console.log("index", index)
-    let allObjects = studentsList[index];
-    console.log("all objects", allObjects)
-    let correspondingObject = allObjects.marks;
-    console.log("corresopondign objects", correspondingObject);
-
+    let index = studentsList.students.findIndex(obj => obj.id == id);
+    let correspondingObject = studentsList.students[index].marks;
 
     for (let i = 0; i < correspondingObject.length; i++) {
-        // console.log(allObjects[i].subject)
         if (correspondingObject[i].subject === subject) {
             correspondingObject[i].mark = marks;
 
@@ -80,11 +73,21 @@ const editMarks = (id, subject, marks) => {
 
     }
 
-
     fs.writeFile("studentsList.json", JSON.stringify(studentsList), err => {
         if (err) throw err;
         console.log("Done writing");
     });
+}
+
+const changeClassTeacher = (className, newTeacherName) => {
+    if( studentsList.name === className){
+        studentsList.teacherName =newTeacherName;
+
+        fs.writeFile("studentsList.json", JSON.stringify(studentsList), err => {
+            if (err) throw err;
+            console.log("Done writing");
+        });
+    }
 }
 
 
@@ -107,4 +110,7 @@ const addDivision = (name, teacherName, students) => {
 // addDivision("Class A", "Renjisha e rajan", ["ritheesh", "renjith", "anandhu", "rupesh"]);
 // console.log("class object =",classObject.students[0].name);
 
-subjectForMultipleStudents("Biology", [[53, 90], [54, 80]]);
+// subjectForMultipleStudents("Biology", [[53, 90], [54, 80]]);
+
+// editMarks(54, "Biology", 70);
+changeClassTeacher("class A","Anoop")
