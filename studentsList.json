@@ -11,12 +11,8 @@
                     "mark": 100
                 },
                 {
-                    "subject": "english",
-                    "mark": 60
-                },
-                {
                     "subject": "Biology",
-                    "mark": 70
+                    "mark": 80
                 }
             ]
         },
@@ -29,8 +25,36 @@
                     "mark": 100
                 },
                 {
-                    "subject": "english",
-                    "mark": 60
+                    "subject": "Biology",
+                    "mark": 70
+                },
+                {
+                    "subject": "Physics",
+                    "mark": 90
+                }
+            ]
+        },
+        {
+            "name": "renjith",
+            "id": 57,
+            "marks": [
+                {
+                    "subject": "malayalam",
+                    "mark": 100
+                },
+                {
+                    "subject": "Biology",
+                    "mark": 80
+                }
+            ]
+        },
+        {
+            "name": "rupesh",
+            "id": 58,
+            "marks": [
+                {
+                    "subject": "malayalam",
+                    "mark": 100
                 },
                 {
                     "subject": "Biology",
