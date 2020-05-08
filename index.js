@@ -2,8 +2,13 @@ const fs = require("fs");
 const studentsList = require("./studentsList.json");
 const division = require("./division.json");
 
-// 1. Add student
-//     1. It should accept name, id
+const writeIntoFile = () => {
+    fs.writeFile("studentsList.json", JSON.stringify(studentsList), err => {
+        if (err) throw err;
+    });
+
+}
+// 1. Add student//     1. It should accept name, id
 const addStudent = (name, id) => {
     let studentsDetails = {
         name: name,
@@ -13,13 +18,13 @@ const addStudent = (name, id) => {
 
     fs.readFile('studentsList.json', function (err, data) {
         let json = JSON.parse(data);
-        console.log("json", json);
         json.students.push(studentsDetails);
         fs.writeFile("studentsList.json", JSON.stringify(json), function (err) {
             if (err) throw err;
             console.log('Done');
         });
     });
+    return studentsDetails
 };
 
 // 2. Enter mark for a student
@@ -31,10 +36,8 @@ const marksForStudent = (id, subject, mark) => {
     };
 
     studentsList.students[index].marks.push(marksDetails);
-    fs.writeFile("studentsList.json", JSON.stringify(studentsList), err => {
-        if (err) throw err;
-        console.log("Done writing");
-    });
+    writeIntoFile();
+    return marksDetails
 };
 
 // 3. Enter mark for a subject for multiple students
@@ -42,6 +45,7 @@ const subjectForMultipleStudents = (subject, idMarksPair) => {//[[53, 90], [54, 
     for (let i = 0; i < idMarksPair.length; i++) {
         marksForStudent(idMarksPair[i][0], subject, idMarksPair[i][1]);
     }
+    return "Done"
 };
 
 // 4. Edit mark for a particular subject of a student
@@ -54,25 +58,20 @@ const editMarks = (id, subject, marks) => {
             correspondingObject[i].mark = marks;
 
         }
-
     }
 
-    fs.writeFile("studentsList.json", JSON.stringify(studentsList), err => {
-        if (err) throw err;
-        console.log("Done writing");
-    });
+    writeIntoFile();
+    return "Done writing"
 };
 
 // 5. Change the class teacher of a class
 const changeClassTeacher = (className, newTeacherName) => {
     if (studentsList.name === className) {
         studentsList.teacherName = newTeacherName;
-
-        fs.writeFile("studentsList.json", JSON.stringify(studentsList), err => {
-            if (err) throw err;
-            console.log("Done writing");
-        });
+        writeIntoFile();
+        return "Done"
     }
+    
 };
 
 // 6. Remove a student from a class
@@ -80,21 +79,20 @@ const removeStudent = (className, id, studentName) => {
     for (let i = 0; i < studentsList.students.length; i++) {
         if (studentsList.students[i].name == studentName) {
             studentsList.students = studentsList.students.slice(0, i).concat(studentsList.students.slice(i + 1, studentsList.students.length));
-            fs.writeFile("studentsList.json", JSON.stringify(studentsList), err => {
-                if (err) throw err;
-                console.log("Done writing");
-            });
+            writeIntoFile();
+            return "Removed"
         }
+        return "Invalid input"
     }
 };
 
 // 7. Delete a subject entry from every students
 const deleteSubEntry = (subject) => {
     for (let i = 0; i < studentsList.students.length; i++) {
-        for (let j = 0; j < studentsList.students[i].marks.length; j++) {        
+        for (let j = 0; j < studentsList.students[i].marks.length; j++) {
             if (studentsList.students[i].marks[j].subject === subject) {
                 studentsList.students[i].marks = studentsList.students[i].marks.slice(0, j).concat(studentsList.students[i].marks.slice(j + 1, studentsList.students[i].marks.length));
-                       
+
             }
         }
     }
@@ -188,9 +186,6 @@ const studentTotalMark = (student) => {
     return totalMarks
 }
 
-
-
-
 const addDivision = (name, teacherName, students) => {
     let divisionInput = {
         name: name,
@@ -206,20 +201,25 @@ const addDivision = (name, teacherName, students) => {
     });
 }
 
+// console.log("To add student with name and id:",addStudent("roma",59));
+// console.log("Enter the mark for a student with id subject and mark :", marksForStudent(55, "malayalam", 100));
+// console.log("Enter mark for a subject for multiple students by the given input subject name, and array of id and marks pairs:",subjectForMultipleStudents("Biology", [[56, 90], [57, 80],[58,100]]));
+// console.log("Edit mark for a particular subject of a student. Input id, Subject and marks:", editMarks(55, "Biology", 80));
+// console.log("Change class teacher name. Input class and new teacher name:", changeClassTeacher("class A", "Anoop"))
+console.log("Remove a student from a class:\n",removeStudent("class A", 56, "renjisha"))
 // console.log(studentTotalMark('renjisha'))
 // console.log(sortStudents())
 
 // addDivision("Class A", "Renjisha e rajan", ["ritheesh", "renjith", "anandhu", "rupesh"]);
 // console.log("class object =",classObject.students[0].name);
 
-// subjectForMultipleStudents("Biology", [[53, 90], [54, 80]]);
+
 
 // editMarks(54, "Biology", 70);
-// changeClassTeacher("class A","Anoop");
 
 // removeStudent("class A", 56, "renjisha")
 
-deleteSubEntry("malayalam")
+// deleteSubEntry("malayalam")
 
 // console.log(topperOfClass("Biology"))
 // console.log(avgOfSubject("malayalam"))
