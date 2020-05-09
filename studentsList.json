@@ -1,1 +1,48 @@
-{"name":"class A","teacherName":"Anoop","students":[{"name":"ritheesh","id":55,"marks":[{"subject":"Biology","mark":80},{"subject":"malayalam","mark":100}]},{"name":"renjith","id":57,"marks":[{"subject":"malayalam","mark":100},{"subject":"Biology","mark":80}]},{"name":"rupesh","id":58,"marks":[{"subject":"malayalam","mark":100},{"subject":"Biology","mark":70}]}]}
+{
+    "name": "class A",
+    "teacherName": "Anoop",
+    "students": [
+        {
+            "name": "ritheesh",
+            "id": 55,
+            "marks": [
+                {
+                    "subject": "Biology",
+                    "mark": 80
+                },
+                {
+                    "subject": "malayalam",
+                    "mark": 100
+                }
+            ]
+        },
+        {
+            "name": "renjith",
+            "id": 57,
+            "marks": [
+                {
+                    "subject": "malayalam",
+                    "mark": 90
+                },
+                {
+                    "subject": "Biology",
+                    "mark": 90
+                }
+            ]
+        },
+        {
+            "name": "renjisha",
+            "id": 58,
+            "marks": [
+                {
+                    "subject": "malayalam",
+                    "mark": 100
+                },
+                {
+                    "subject": "Biology",
+                    "mark": 70
+                }
+            ]
+        }
+    ]
+}
