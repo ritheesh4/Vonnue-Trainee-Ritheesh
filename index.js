@@ -6,7 +6,7 @@ const writeIntoFile = () => {
     fs.writeFile("studentsList.json", JSON.stringify(studentsList), err => {
         if (err) throw err;
     });
-}
+};
 
 // 1. Add student//     1. It should accept name, id
 const addStudent = (name, id) => {
@@ -24,7 +24,7 @@ const addStudent = (name, id) => {
             console.log('Done');
         });
     });
-    return studentsDetails
+    return studentsDetails;
 };
 
 // 2. Enter mark for a student
@@ -37,7 +37,7 @@ const marksForStudent = (id, subject, mark) => {
 
     studentsList.students[index].marks.push(marksDetails);
     writeIntoFile();
-    return marksDetails
+    return marksDetails;
 };
 
 // 3. Enter mark for a subject for multiple students
@@ -45,7 +45,7 @@ const subjectForMultipleStudents = (subject, idMarksPair) => {//[[53, 90], [54, 
     for (let i = 0; i < idMarksPair.length; i++) {
         marksForStudent(idMarksPair[i][0], subject, idMarksPair[i][1]);
     }
-    return "Done"
+    return "Done";
 };
 
 // 4. Edit mark for a particular subject of a student
@@ -61,7 +61,7 @@ const editMarks = (id, subject, marks) => {
     }
 
     writeIntoFile();
-    return "Done writing"
+    return "Done writing";
 };
 
 // 5. Change the class teacher of a class
@@ -69,7 +69,7 @@ const changeClassTeacher = (className, newTeacherName) => {
     if (studentsList.name === className) {
         studentsList.teacherName = newTeacherName;
         writeIntoFile();
-        return "Done"
+        return "Done";
     }
 
 };
@@ -80,11 +80,11 @@ const removeStudent = (className, id, studentName) => {
         if (studentsList.students[i].name == studentName) {
             studentsList.students = studentsList.students.slice(0, i).concat(studentsList.students.slice(i + 1, studentsList.students.length));
             writeIntoFile();
-            return "Removed"
+            return "Removed";
         }
 
     }
-    return "Invalid input"
+    return "Invalid input";
 };
 
 // 7. Delete a subject entry from every students
@@ -98,8 +98,8 @@ const deleteSubEntry = (subject) => {
         }
     }
 
-   writeIntoFile();
-   return "Done"
+    writeIntoFile();
+    return "Done";
 };
 
 // 8. Find the topper of a class given a subject
@@ -112,14 +112,14 @@ const topperOfClass = (subject) => {
             if (studentsList.students[i].marks[j].subject === subject) {
                 if (studentsList.students[i].marks[j].mark > topMark) {
                     topMark = studentsList.students[i].marks[j].mark;
-                    topStudent = studentsList.students[i].name
+                    topStudent = studentsList.students[i].name;
                 }
             }
         }
     }
 
-    return topStudent
-}
+    return topStudent;
+};
 
 // 9. Find the average mark for a given subject
 const avgOfSubject = (subject) => {
@@ -137,9 +137,8 @@ const avgOfSubject = (subject) => {
     }
 
     avgMark = totalMarks / count;
-    return avgMark
-
-}
+    return avgMark;
+};
 
 // 10. Sort and display the list of students in any order
 //  - ordered by name, mark etc
@@ -161,7 +160,7 @@ const studentTotalMark = (student) => {
     for (let i = 0; i < studentsList.students.length; i++) {
         if (studentsList.students[i].name === student) {
             studentId = i;
-           
+
             for (let j = 0; j < studentsList.students[i].marks.length; j++) {
                 totalMarks = totalMarks + studentsList.students[i].marks[j].mark;
             }
@@ -169,7 +168,6 @@ const studentTotalMark = (student) => {
             writeIntoFile();
             break
         }
-       
     }
     return totalMarks
 }
@@ -185,7 +183,7 @@ const addDivision = (name, teacherName, students) => {
     fs.writeFile("division.json", JSON.stringify(division), err => {
         if (err) throw err;
         console.log("Done writing");
-        console.log(division)
+        console.log(division);
     });
 }
 
@@ -199,22 +197,8 @@ const addDivision = (name, teacherName, students) => {
 // console.log(" Find the topper of a class given a subject. Input subject:\n",topperOfClass("Biology"));
 // console.log("Find the average mark for a given subject. Input the subject:\n",avgOfSubject("malayalam"));
 // console.log(" Sort and display the list of students in any order",sortStudents());
-console.log("Find the total mark for a student and save it in the user object",studentTotalMark("renjisha"))
-
-
-// console.log(studentTotalMark('renjisha'))
-// console.log(sortStudents())
-
-// addDivision("Class A", "Renjisha e rajan", ["ritheesh", "renjith", "anandhu", "rupesh"]);
-// console.log("class object =",classObject.students[0].name);
+// console.log("Find the total mark for a student and save it in the user object",studentTotalMark("renjisha"))
+// addDivision("Class A", "Anoop", ["ritheesh", "renjith", "anandhu", "rupesh"]);
 
 
 
-// editMarks(54, "Biology", 70);
-
-// removeStudent("class A", 56, "renjisha")
-
-// deleteSubEntry("malayalam")
-
-// console.log(topperOfClass("Biology"))
-// console.log(avgOfSubject("malayalam"))
