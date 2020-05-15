@@ -1,6 +1,4 @@
-https://www.youtube.com/watch?v=FHZn6706e3Q&list=PL4cUxeGkcC9ivBf_eKCPIAYXWzLlPAm6G&index=5
+https://www.youtube.com/watch?v=kGW8Al_cga4&list=PL4cUxeGkcC9ivBf_eKCPIAYXWzLlPAm6G&index=6
 
--cascade
--inheritance
--css
--How to assign styles to different tages
+-HTML5 Semantic tags
+- <main><section><article><aside><header><footer>
