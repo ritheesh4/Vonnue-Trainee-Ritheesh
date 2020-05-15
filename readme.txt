@@ -1,1 +1,1 @@
-Creating clone of ft.com bar
+Creating clone of hotstar bar
