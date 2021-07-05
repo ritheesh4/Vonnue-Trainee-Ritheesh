@@ -1,0 +1,13 @@
+// 26. LCM of two numbers
+
+const lcm = (number1, number2) => {
+    for (let lcmValue = 2; lcmValue < number1; lcmValue++) {
+        if (number1 % lcmValue === 0) {
+            if (number2 % lcmValue === 0) {
+                return lcmValue;
+            }
+        }
+    }
+};
+
+console.log("Lcm of two numbers 15 and 25:", lcm(15, 25));
